@@ -30,3 +30,6 @@ Python has experienced rapid adoption in the last decade and is now one of the m
 """
 
 # 1.2.1. Common Uses
+"""
+
+"""
