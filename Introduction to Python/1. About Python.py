@@ -31,5 +31,45 @@ Python has experienced rapid adoption in the last decade and is now one of the m
 
 # 1.2.1. Common Uses
 """
+Python is a general-purpose language used in almost all application domains such as
 
+    communications
+
+    web development
+
+    CGI and graphical user interfaces
+
+    game development
+
+    resource planning
+
+    multimedia, data science, security, etc., etc., etc.
+
+Used and supported extensively by Internet services and high-tech companies including
+
+    Google
+
+    Netflix
+
+    Meta
+
+    Dropbox
+
+    Amazon
+
+    Reddit
+
+For reasons we will discuss, Python is particularly popular within the scientific community and behind many scientific achievements in
+
+    Space Science
+
+    Particle Physics
+
+    Genetics
+
+and practically all branches of academia.
+
+Meanwhile, Python is also very beginner-friendly and is found to be suitable for students learning programming and recommended to introduce computational methods to students in fields other than computer science.
+
+Python is also replacing familiar tools like Excel as an essential skill in the fields of finance and banking.
 """
