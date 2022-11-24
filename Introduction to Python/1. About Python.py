@@ -28,3 +28,5 @@ Python is free and open source, with development coordinated through the Python 
 
 Python has experienced rapid adoption in the last decade and is now one of the most popular programming languages.
 """
+
+# 1.2.1. Common Uses
