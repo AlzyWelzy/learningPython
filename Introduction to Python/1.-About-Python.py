@@ -1,7 +1,7 @@
 
 import matplotlib.pyplot as plt
 import numpy as np
-print("ZA WORLD OVERHEAVEN!")
+
 a = 1
 print(a)
 
