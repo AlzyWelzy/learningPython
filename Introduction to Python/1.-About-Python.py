@@ -1,7 +1,6 @@
 
 import matplotlib.pyplot as plt
 import numpy as np
-
 a = 1
 print(a)
 
