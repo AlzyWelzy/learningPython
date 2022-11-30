@@ -1,6 +1,6 @@
 '''
 Author: AlzyWelzy
-Licenced to: AlzyWelzy Company
+Licensed to: AlzyWelzy Company
 ***********Thanks for reading**********
 '''
 import os  # importing the os module
