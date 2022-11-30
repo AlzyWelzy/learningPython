@@ -1,1 +1,0 @@
-print("starplatinum za warudo")
