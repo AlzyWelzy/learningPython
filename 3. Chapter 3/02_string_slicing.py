@@ -16,6 +16,14 @@ name = "Harry"
 # print(c)
 
 name = "HarryIsGood"
+name = "AlzyWelzy"
 # d = name[0::3]
-d = name[:0:-1]
+# d = name[:0:-1]
+d = name[::1]
+print(d)
+d = name[::2]
+print(d)
+d = name[::3]
+print(d)
+d = name[::-1]
 print(d)
