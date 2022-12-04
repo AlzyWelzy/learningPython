@@ -4,7 +4,7 @@ t = (1, 2, 4, 5)
 # t1 = () # Empty tuple
 # t1 = (1) # Wrong way to declare a Tuple with Single element
 t1 = (1,)  # Tuple with Single element
-print(t1)
+print(t)
 
 # Printing the elements of a tuple
 # print(t[0])
