@@ -14,4 +14,4 @@ print(a)
 # We can create a list with items of different types
 c = [45, "Alzy", False, 6.9]
 print(c)
-print(c[c.index("Harry")][0:5:2])
+print(c[c.index("Alzy")][0:5:2])
