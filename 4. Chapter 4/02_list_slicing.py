@@ -1,4 +1,4 @@
 # List slicing
-friends = ["Alzy", "Tom", "Rohan", "Sam", "Divya", 45]
+friends = ["Alzy", "Tom", "Arfan", "Sam", "Divya", 45]
 print(friends[0:4])
 print(friends[-4:])
