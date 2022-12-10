@@ -29,3 +29,19 @@ print(list(myDict.values()))
 print(myDict[1])
 
 print(myDict.items())
+
+print(myDict)
+
+print(myDict.update({"friends": "Sum"}))
+
+print(myDict)
+
+print(myDict["fast"])
+
+a = myDict["fast"]
+print(a)
+
+print(myDict.get("fast"))
+
+b = myDict.get('fast')
+print(b)
