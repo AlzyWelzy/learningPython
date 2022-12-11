@@ -32,6 +32,9 @@ print(myDict.items())
 
 print(myDict)
 
+updateDict = {"wife": "Pratibha",
+              "mistress": "Prema"}
+
 print(myDict.update({"friends": "Sum"}))
 
 print(myDict)
