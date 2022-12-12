@@ -49,3 +49,12 @@ print(myDict.get("fast"))
 
 b = myDict.get('fast')
 print(b)
+
+print(myDict.get("Alzy"))  # Prints value associated with key "Alzy"
+print(myDict["Alzy"])  # Prints value associated with key "Alzy"
+
+# The difference between .get and [] syntax in Dictionaries
+# Returns None as "Alzy2" is not present in the dictionary
+print(myDict.get("Alzy2"))
+# Throws an Error as "Alzy2" is not present in the dictionary
+print(myDict["Alzy2"])
