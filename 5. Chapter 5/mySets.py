@@ -26,3 +26,23 @@ b.add((4, 5, 6))  # will work
 # b.add({"Alzy": "Welzy"})  # will throw an error
 
 print(b)
+
+print(len(b))
+
+b.remove(4)
+
+print(len(b))
+
+print(b)
+
+
+b.pop()
+
+b.clear()
+print(b.add(4))
+print(b.add(5))
+print(b.add(6))
+print(b.union({8, 11, 123, 1235, 435, 1, 12}))
+print(b)
+
+print(b.intersection({5, 999999999999}))
