@@ -1,4 +1,8 @@
-names = ["Alzy Welzy", "Tarun Ghawri", "Vishal Sahu"]
+names = ["Alzy Welzy", "Tarun Ghawri", "Vishal Sahu",
+         "Sanskriti Gupta", "Samisti Yadav"]
 
 for i in names:
-    print(f"Greetings, {i}")
+    if (i[0] == "S"):
+        print(f"Greetings, {i}")
+    else:
+        continue
