@@ -120,7 +120,6 @@ def chance_dice(a, b):
 
 # End of function definitions
 
-#       LifeGame by I.B.
 # beguinning linear storytelling
 
 
