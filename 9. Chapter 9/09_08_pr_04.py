@@ -1,7 +1,7 @@
-with open("sample.txt") as f:
+with open("9. Chapter 9/sample.txt") as f:
     content = f.read()
 
 content = content.replace("donkey", "$%^@$^#")
 
-with open("sample.txt", "w") as f:
+with open("9. Chapter 9/sample.txt", "w") as f:
     f.write(content)
