@@ -20,8 +20,8 @@ file.close()
 
 file = open("9. Chapter 9/example.txt", "w")  # file will empty
 
-file.write("I am writing stuff")
 
+print(file.write("I am writing stuff"))
 file.close()
 
 file = open("9. Chapter 9/example.txt", "r")
@@ -33,3 +33,11 @@ text = file.readlines()
 print(text)
 
 file.close()
+
+
+# with open("9. Chapter 9/example.txt", "r") as f:
+with open("9. Chapter 9/example.txt", "w") as f:
+    # a = f.read()
+    a = f.write('me')
+
+print(a)
