@@ -5,7 +5,7 @@
 #         f.write(str(f"{num} * {i} = {num*i}\n"))
 
 
-for num in range(1, 1001):
+for num in range(1, 10001):
     with open(f'9. Chapter 9/TablesOfNums/table-{num}.txt', "w") as f:
-        for i in range(1, 1001):
+        for i in range(1, 10001):
             f.write(str(f"{num} * {i} = {num*i}\n"))
