@@ -19,6 +19,23 @@ class Complex:
         m = o.re * o.re + o.im * o.im
         return Complex((self.re * o.re + self.im * o.im)/m, (self.im * o.re - self.re * o.im)/m)
 
+    def __rmul__(self, o):
+        # Allow multiplication with scalars on the right
+        return Complex(self.re * o, self.im * o)
+
+    def __radd__(self, o):
+        # Allow addition with scalars on the right
+        return Complex(self.re + o, self.im)
+
+    def __rsub__(self, o):
+        # Allow subtraction from scalars on the right
+        return Complex(o - self.re, -self.im)
+
+    def __rtruediv__(self, o):
+        # Allow division of scalars by complex numbers on the right
+        m = self.re * self.re + self.im * self.im
+        return Complex((o * self.re) / m, (-o * self.im) / m)
+
     def __abs__(self):
         return sqrt(self.re*self.re + self.im*self.im)
 
@@ -50,14 +67,8 @@ class Complex:
     def __str__(self):
         if self.im == 0:
             return f'{self.re:.2f}'
-        if self.re == 0:
-            return f'{self.im:.2f}i'
-        if self.im < 0:
-            return f'{self.re:.2f} - {-self.im:.2f}i'
-        else:
-            return f'{self.re:.2f} + {self.im:.2f}i'
 
-    def __iadd__(self, o):
+        def __iadd__(self, o):
         self.re += o.re
         self.im += o.im
         return self
@@ -71,3 +82,17 @@ class Complex:
         self.re = self.re*o.re - self.im*o.im
         self.im = self.re * o.im + self.im * o.re
         return self
+
+    def __itruediv__(self, o):
+        m = o.re * o.re + o.im * o.im
+        self.re = (self.re * o.re + self.im * o.im) / m
+        self.im = (self.im * o.re - self.re * o.im) / m
+        return self
+
+    def conjugate(self):
+        """Return the complex conjugate of the complex number."""
+        return Complex(self.re, -self.im)
+
+    def phase(self):
+        """Return the phase (or argument) of the complex number."""
+        return atan2(self.im, self.re)
