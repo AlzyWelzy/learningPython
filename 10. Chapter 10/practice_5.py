@@ -33,11 +33,6 @@ class Train:
         else:
             print("you haven't even booked a ticket yet.")
 
-        # if (self.seats < 90):
-        #     print("Ok, your ticket is cancel and you will get 90% of your money back.")
-        # else:
-        #     print("You haven't booked a ticket yet.")
-
     def getTrainInfo(self):
         print(len(self.seats))
 
