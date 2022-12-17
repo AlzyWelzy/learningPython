@@ -8,12 +8,16 @@ class Employee:
 
     @property
     def salaryAfter(self):
-        return self.salary+self.increment
+        return self.salary*self.increment
 
     @salaryAfter.setter
     def salaryAfter(self, val):
-        self.increment = val+self.salary
+        self.increment = val/self.salary
 
 
-e = Employee("Alzy Welzy", 1000, 1000)
+e = Employee("Alzy Welzy", 1000, 1.5)
 print(e.salaryAfter)
+
+print(e.increment)
+e.salaryAfter = 2000
+print(e.increment)
