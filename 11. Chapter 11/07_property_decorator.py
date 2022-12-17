@@ -12,8 +12,9 @@ class Employee:
     def totalSalary(self, val):
         self.salarybonus = val - self.salary
 
+
 e = Employee()
 print(e.totalSalary)
-e.totalSalary = 5800
+e.totalSalary = 7000
 print(e.salary)
 print(e.salarybonus)
