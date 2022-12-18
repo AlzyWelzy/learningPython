@@ -1,13 +1,15 @@
 import random
-randomInt = random.randint(1, 100)
-guesses = 0
-userInt = None
 
 
-def game():
-    global userInt, guesses
+def game(randomInt):
+    guesses = 0
+    userInt = None
+
     while (randomInt != userInt):
         userInt = int(input("Enter a random integer between 1 to 100: "))
+        if userInt < 1 or userInt > 100:
+            print("Invalid guess. Please enter a number between 1 and 100.")
+            continue
         if (randomInt == userInt):
             print(
                 f"CORRECT! The Random Number was {randomInt} and you guessed it in {guesses}.")
@@ -18,17 +20,19 @@ def game():
             else:
                 guesses += 1
                 print("Too High!")
+    return guesses
 
 
-game()
+randomInt = random.randint(1, 100)
+score = game(randomInt)
 
 
 with open("Project 2/hiscore.txt", "r") as f:
     hiScore = int(f.read())
     print(f"Your current high score is {hiScore}.")
 
-if (guesses > hiScore):
+if (score > hiScore):
     print(
-        f"You broke your high score that was {hiScore}. Your new high score is {guesses}.")
+        f"You broke your high score that was {hiScore}. Your new high score is {score}.")
     with open("Project 2/hiscore.txt", "w") as f:
-        f.write(str(guesses))
+        f.write(str(score))
