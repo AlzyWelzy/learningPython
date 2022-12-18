@@ -1,4 +1,5 @@
 from math import sqrt
+from math import atan2
 
 
 class Complex:
@@ -69,8 +70,8 @@ class Complex:
             return f'{self.re:.2f}'
 
         def __iadd__(self, o):
-        self.re += o.re
-        self.im += o.im
+            self.re += o.re
+            self.im += o.im
         return self
 
     def __isub__(self, o):
@@ -96,3 +97,11 @@ class Complex:
     def phase(self):
         """Return the phase (or argument) of the complex number."""
         return atan2(self.im, self.re)
+
+
+c1 = Complex(1, 2)
+c2 = Complex(3, 4)
+
+c1 += c2
+
+print(c1)
