@@ -3,10 +3,13 @@ import random
 
 def game(randomInt):
     guesses = 0
-    userInt = None
+    userInt = 0
 
     while (randomInt != userInt):
-        userInt = int(input("Enter a random integer between 1 to 100: "))
+        try:
+            userInt = int(input("Enter a random integer between 1 to 100: "))
+        except Exception as e:
+            print("That's not an int!")
         if userInt < 1 or userInt > 100:
             print("Invalid guess. Please enter a number between 1 and 100.")
             continue
