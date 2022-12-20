@@ -6,15 +6,10 @@ class Library:
 
     def displayBooks(self):
         print("Books present in the library are as follows: ")
-        # for index, book in enumerate(self.allBooks):
-        # for index, book in list(self.books.keys()):
-        # print(f"{index+1}. {book} in quantity {self.books.get(book)}")
-
         for key, value in self.books.items():
             print(f"{key} in quantity {value}.")
 
     def borrowBook(self, bookName):
-
         if bookName in self.allBooks and bookName not in self.issuedbooks:
             if self.books.get(bookName) > 0:
                 print(
@@ -41,9 +36,6 @@ class Library:
 
     def issuedBooks(self):
         print("Books that are issued to you from our library are as follows: ")
-
-        # print(len(self.issuedBooks))
-
         if len(self.issuedbooks) == 0:
             print("You never borrowed any books from us.")
         else:
@@ -62,15 +54,12 @@ class Student:
 
 
 if __name__ == "__main__":
-
     books = {
         "Physics": 1,
         "Chemistry": 11,
         "Biology": 2,
         "Mathematics": 2
     }
-
-    # centraLibrary = Library(["Algorithms", "Django", "Clrs", "Python Notes"])
     centraLibrary = Library(books)
     student = Student()
 
