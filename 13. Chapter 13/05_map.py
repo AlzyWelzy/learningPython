@@ -1,5 +1,8 @@
-def square(num):
-    return num*num
+# def square(num):
+#     return num*num
+
+def square(a): return a*a
+
 
 l = [1, 2, 4]
 
