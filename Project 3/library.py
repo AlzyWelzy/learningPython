@@ -1,20 +1,30 @@
 class Library:
     def __init__(self, books):
         self.books = books
+        self.allBooks = list(self.books.keys())
         self.issuedbooks = []
 
     def displayBooks(self):
         print("Books present in the library are as follows: ")
-        for book in self.books:
-            print(f" *{book}")
+        # for index, book in enumerate(self.allBooks):
+        # for index, book in list(self.books.keys()):
+        # print(f"{index+1}. {book} in quantity {self.books.get(book)}")
+
+        for key, value in self.books.items():
+            print(f"{key} in quantity {value}.")
 
     def borrowBook(self, bookName):
-        if bookName in self.books:
-            print(
-                f"The book {bookName} is available in our library and it has been lent to you. Kindly, return it in 30 days.")
-            self.books.remove(bookName)
-            self.issuedbooks.append(bookName)
-            return True
+
+        if bookName in self.allBooks and bookName not in self.issuedbooks:
+            if self.books.get(bookName) > 0:
+                print(
+                    f"The book {bookName} is available in our library and it has been lent to you. Kindly, return it in 30 days.")
+                self.allBooks.remove(bookName)
+                self.issuedbooks.append(bookName)
+                self.books[bookName] -= 1
+                return True
+            else:
+                print("Sorry either you already have it or it's not available.")
         else:
             print("Sorry, we don't have it.")
             return False
@@ -22,7 +32,8 @@ class Library:
     def returnBook(self, bookName):
         if bookName in self.issuedbooks:
             self.issuedbooks.remove(bookName)
-            self.books.append(bookName)
+            self.allBooks.append(bookName)
+            self.books[bookName] += 1
             print(
                 "Thanks for returning this book! Hope you enjoyed reading it. Have a great day ahead!")
         else:
@@ -51,7 +62,16 @@ class Student:
 
 
 if __name__ == "__main__":
-    centraLibrary = Library(["Algorithms", "Django", "Clrs", "Python Notes"])
+
+    books = {
+        "Physics": 1,
+        "Chemistry": 11,
+        "Biology": 2,
+        "Mathematics": 2
+    }
+
+    # centraLibrary = Library(["Algorithms", "Django", "Clrs", "Python Notes"])
+    centraLibrary = Library(books)
     student = Student()
 
     while True:
